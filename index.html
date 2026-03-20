@@ -18,80 +18,168 @@
   --nav-bg: rgba(0,0,0,0.5);
 }
 
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
-html { scroll-behavior:smooth; }
+* {
+  margin:0; padding:0; box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
 
-body { background:var(--primary-bg); color:var(--primary-text); transition:0.5s; }
-.light-theme { background:#f5f5f5; color:#222; }
+html { scroll-behavior: smooth; }
+
+body {
+  background:var(--primary-bg);
+  color:var(--primary-text);
+  transition:0.5s;
+}
+
+.light-theme { 
+  background:#f5f5f5; 
+  color:#222; 
+}
+
+.light-theme .card,
+.light-theme .skill {
+  background:#ffffff;
+  color:#000;
+}
+
+.light-theme nav a {
+  color:#000;
+}
 
 /* NAV */
 nav {
   display:flex; justify-content:space-between; align-items:center;
-  padding:20px 50px; background:var(--nav-bg);
+  padding:20px 50px;
+  background:var(--nav-bg);
   position:sticky; top:0;
+  z-index: 100;
 }
+
 nav ul { display:flex; gap:25px; list-style:none; }
-nav a { text-decoration:none; color:white; transition:0.3s; }
-nav a:hover { color:var(--accent); text-shadow:0 0 10px #ff6aff; }
-.theme-btn { background:none; border:none; color:white; font-size:20px; cursor:pointer; }
+
+nav a {
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+nav a:hover {
+  color:var(--accent);
+  text-shadow:0 0 10px #ff6aff;
+}
+
+.theme-btn {
+  background:none; border:none; color:white;
+  font-size:20px; cursor:pointer;
+}
 
 /* HERO */
 .hero {
-  display:flex; justify-content:center; align-items:center;
-  flex-wrap:wrap; padding:100px 20px; gap:50px; text-align:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  padding:100px 20px;
+  gap:50px;
+  text-align:center;
 }
+
 .hero h1 {
   font-size:45px;
   background:linear-gradient(90deg,#ff6aff,#2575fc);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
+
 .hero p { color:var(--secondary-text); }
+
 .btn {
-  display:inline-block; margin:10px; padding:12px 25px;
-  border-radius:30px; text-decoration:none;
-  background:var(--btn-gradient); color:white; transition:0.3s;
+  display:inline-block;
+  margin:10px;
+  padding:12px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  background:var(--btn-gradient);
+  color:white;
+  transition:0.3s;
 }
-.btn:hover { transform:scale(1.05); }
-.hero img { width:260px; border-radius:20px; }
+
+.btn:hover {
+  transform:scale(1.05);
+}
+
+.hero img {
+  width:260px;
+  border-radius:20px;
+}
 
 /* SECTION */
-section { padding:70px 20px; text-align:center; }
-h2 { color:var(--accent); margin-bottom:30px; }
+section {
+  padding:70px 20px;
+  text-align:center;
+}
+
+h2 {
+  color:var(--accent);
+  margin-bottom:30px;
+}
 
 /* SKILLS */
 .skills {
-  display:flex; flex-wrap:wrap; justify-content:center; gap:20px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
 }
+
 .skill {
-  padding:20px; border-radius:20px;
-  background:var(--secondary-bg); width:130px;
+  padding:20px;
+  border-radius:20px;
+  background:var(--secondary-bg);
+  width:130px;
   transition:0.3s;
 }
-.skill:hover { background:var(--accent); transform:translateY(-8px); }
+
+.skill:hover {
+  background:var(--accent);
+  transform:translateY(-8px);
+}
 
 /* PROJECTS */
 .project-container {
-  display:flex; flex-wrap:wrap; justify-content:center; gap:25px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
 }
-.card {
-  width:280px; padding:20px; border-radius:20px;
-  background:var(--secondary-bg); transition:0.3s;
-}
-.card:hover { transform:translateY(-8px); }
 
-/* CONTACT */
-#contact a { color:var(--accent); text-decoration:none; }
+.card {
+  width:280px;
+  padding:20px;
+  border-radius:20px;
+  background:var(--secondary-bg);
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-8px);
+}
+
+.card img {
+  width:100%;
+  border-radius:15px;
+}
 
 /* FOOTER */
-footer { padding:20px; text-align:center; }
-footer a { margin:0 10px; color:white; }
+footer {
+  padding:20px;
+  text-align:center;
+}
 
-/* LIGHT MODE FIX */
-.light-theme .card,
-.light-theme .skill { background:#fff; color:#000; }
-
-.light-theme nav a { color:#000; }
+footer a {
+  margin:0 10px;
+  color:white;
+}
 
 /* MOBILE */
 @media(max-width:768px){
@@ -110,6 +198,7 @@ footer a { margin:0 10px; color:white; }
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#achievements">Highlights</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
@@ -123,40 +212,30 @@ footer a { margin:0 10px; color:white; }
     <p>Passionate about building real-world systems using Java, SQL & modern technologies</p>
     <p>Java • SQL • Python • OOP • Problem Solving</p>
 
-    <a href="cv.pdf" class="btn"><i class="fas fa-download"></i> Download CV</a>
+    <a href="cv.pdf" class="btn"><i class="fas fa-download"></i> CV</a>
     <a href="https://github.com/demoojaya" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
     <a href="https://www.linkedin.com/in/dimasha-jayathilaka-202ab127a" target="_blank" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
     <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i> Hire Me</a>
   </div>
 
-  <img src="girl.jpeg">
+  <img src="girl.jpeg" alt="Profile Image">
 </section>
 
 <!-- ABOUT -->
 <section id="about">
   <h2>About Me</h2>
   <p>
-    Computer Science & Mathematics undergraduate passionate about solving real-world problems 
-    through software development. I enjoy building systems using Java, SQL, and Python, and I’m 
-    continuously learning new technologies to improve my skills.
+    Computer Science & Mathematics undergraduate passionate about software development and problem-solving. 
+    Experienced in Java, SQL, and Python, with a strong interest in building real-world systems 
+    and continuously learning new technologies.
   </p>
-</section>
-
-<!-- ACHIEVEMENTS -->
-<section>
-  <h2>Highlights</h2>
-  <ul style="list-style:none; line-height:2;">
-    <li>✔ Developed Airline Booking System using JavaFX & MySQL</li>
-    <li>✔ Built Pharmacy Management System with role-based access</li>
-    <li>✔ Strong knowledge in DBMS, OOP & Software Design</li>
-    <li>✔ Interested in Quantum Computing & Machine Learning</li>
-  </ul>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
   <h2>Skills</h2>
   <div class="skills">
+
     <div class="skill"><i class="fab fa-java fa-2x"></i><p>Java</p></div>
     <div class="skill"><i class="fas fa-code fa-2x"></i><p>C</p></div>
     <div class="skill"><i class="fas fa-database fa-2x"></i><p>SQL</p></div>
@@ -164,7 +243,19 @@ footer a { margin:0 10px; color:white; }
     <div class="skill"><i class="fab fa-html5 fa-2x"></i><p>HTML</p></div>
     <div class="skill"><i class="fab fa-css3-alt fa-2x"></i><p>CSS</p></div>
     <div class="skill"><i class="fab fa-github fa-2x"></i><p>GitHub</p></div>
+
   </div>
+</section>
+
+<!-- ACHIEVEMENTS / HIGHLIGHTS -->
+<section id="achievements">
+  <h2>Highlights</h2>
+  <ul style="list-style:none; line-height:2;">
+    <li>✔ Developed Airline Booking System using JavaFX & MySQL</li>
+    <li>✔ Built Pharmacy Management System with role-based access</li>
+    <li>✔ Strong understanding of DBMS, OOP & Software Design</li>
+    <li>✔ Interested in Quantum Computing & Machine Learning</li>
+  </ul>
 </section>
 
 <!-- PROJECTS -->
@@ -175,7 +266,7 @@ footer a { margin:0 10px; color:white; }
     <div class="card">
       <h3>Airline Booking System ✈️</h3>
       <p>
-        • JavaFX-based system<br>
+        • JavaFX-based full system<br>
         • Flight search & booking<br>
         • Admin dashboard & DAO pattern
       </p>
@@ -187,39 +278,49 @@ footer a { margin:0 10px; color:white; }
       <h3>Pharmacy Management 💊</h3>
       <p>
         • Inventory & order management<br>
-        • Role-based access<br>
+        • Role-based access (Admin, Pharmacist)<br>
         • SQL constraints & triggers
       </p>
-      <p><b>Tech:</b> MySQL, SQL</p>
+      <p><b>Tech:</b> MySQL, SQL, DBMS</p>
       <a href="https://github.com/demoojaya/Pharamacy-group-Project" target="_blank" class="btn">View Code</a>
     </div>
 
     <div class="card">
       <h3>Quantum ML ⚛️</h3>
       <p>
-        • Quantum kernel methods<br>
-        • Data analysis research<br>
+        • Explored quantum kernel methods<br>
+        • High-dimensional data analysis<br>
+        • Research-based article
       </p>
-      <p><b>Tech:</b> Python</p>
+      <p><b>Tech:</b> Python, QML Concepts</p>
       <a href="https://medium.com/@dimashatajmani" target="_blank" class="btn">Read</a>
     </div>
 
   </div>
 </section>
 
+<!-- GITHUB STATS -->
+<section>
+  <h2>GitHub Stats</h2>
+  <img src="https://github-readme-stats.vercel.app/api?username=demoojaya&show_icons=true" />
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
 
-  <p><i class="fas fa-envelope"></i> 
+  <p>
+    <i class="fas fa-envelope"></i> 
     <a href="mailto:dimashatajmani@gmail.com">dimashatajmani@gmail.com</a>
   </p>
 
-  <p><i class="fab fa-linkedin"></i> 
+  <p>
+    <i class="fab fa-linkedin"></i> 
     <a href="https://www.linkedin.com/in/dimasha-jayathilaka-202ab127a" target="_blank">LinkedIn Profile</a>
   </p>
 
-  <p><i class="fab fa-github"></i> 
+  <p>
+    <i class="fab fa-github"></i> 
     <a href="https://github.com/demoojaya" target="_blank">GitHub Profile</a>
   </p>
 
@@ -237,7 +338,7 @@ footer a { margin:0 10px; color:white; }
 
 <script>
 // typing effect
-const texts = ["Hi, I'm Dimasha 👋", "Aspiring Software Engineer", "Problem Solver"];
+const texts = ["Hi, I'm Dimasha 👋", "Software Developer", "Problem Solver"];
 let i=0,j=0;
 
 function type(){
