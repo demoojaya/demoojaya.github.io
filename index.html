@@ -3,87 +3,260 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dimasha | Portfolio</title>
+  <title>Dimasha | Creative Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <h2>Dimasha</h2>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <h1 id="typing"></h1>
-  <p>Computer Science Undergraduate | Java | SQL | Python</p>
-  <p>Passionate about mathematics and problem-solving</p>
-
-  <div class="hero-buttons">
-    <a href="cv.pdf" class="btn" download>Download CV</a>
-    <a href="https://github.com/demoojaya" class="btn" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/dimashajayathilaka" class="btn" target="_blank">LinkedIn</a>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="fade">
-  <h2>About Me</h2>
-  <p>I'm a second-year undergraduate at the University of Sri Jayewardenepura,
-  majoring in Computer Science, Applied Mathematics, and Mathematics.</p>
-  <p>I enjoy teamwork, adapting to new environments, and building impactful systems.</p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="fade">
-  <h2>Skills</h2>
-  <div class="skills">
-    <div class="skill">Java</div>
-    <div class="skill">SQL</div>
-    <div class="skill">Python</div>
-    <div class="skill">MySQL</div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="fade">
-  <h2>Projects</h2>
-
-  <div class="project-container">
-
-    <div class="card fade">
-      <img src="project1.png" alt="Airline Booking System">
-      <h3>Airline Booking System</h3>
-      <p>JavaFX + MySQL system with full booking management.</p>
-      <a href="#" class="btn">View Code</a>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">Dimasha</span>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about" class="nav-active">Introduction</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Portfolio</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <div class="card fade">
-      <img src="project2.png" alt="Pharmacy Management System">
-      <h3>Pharmacy Management System</h3>
-      <p>Database system with role-based access and SQL constraints.</p>
-      <a href="https://github.com/demoojaya/Pharamacy-group-Project" class="btn">View Code</a>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-texture"></div>
+    <span class="sparkle" style="top:12%;left:55%;font-size:1.6rem">✦</span>
+    <span class="sparkle" style="top:70%;left:85%;font-size:1.1rem">✦</span>
+    <span class="sparkle" style="top:30%;left:10%;font-size:0.9rem">+</span>
+    <div class="squiggle" style="top:60%;left:62%;width:140px;opacity:.5">
+      <svg viewBox="0 0 140 60" fill="none"><path d="M5 45 Q30 10 55 30 Q80 50 105 15 Q120 5 135 20" stroke="#c4935a" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
     </div>
+    <div class="hero-layout">
+      <div class="photo-wrap">
+        <div class="oval-frame">
+          <img src="profile.jpg" alt="Dimasha" onerror="this.style.display='none'">
+          <div class="ph-icon"><i class="fa-solid fa-user"></i></div>
+        </div>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">By Dimasha Jayathilaka</p>
+        <h1>
+          <em class="amber-italic">CREATIVE</em>
+          <strong>PORTFOLIO</strong>
+        </h1>
+        <p class="hero-sub">Computer Science Undergraduate · Java · SQL · Python</p>
+        <div class="cta-row">
+          <a href="cv.pdf" class="btn b-outline" download><i class="fa-solid fa-download"></i> Download CV</a>
+          <a href="https://github.com/demoojaya" class="btn b-fill" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://linkedin.com/in/dimashajayathilaka" class="btn b-outline" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ABOUT -->
+  <section id="about" class="pane reveal">
+    <span class="sparkle" style="top:8%;right:8%;font-size:1.4rem">✦</span>
+    <div class="pane-inner split-left">
+      <div class="oval-frame oval-rect">
+        <img src="about.jpg" alt="About" onerror="this.style.display='none'">
+        <div class="ph-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      </div>
+      <div class="pane-text">
+        <h2 class="pane-head amber">ABOUT ME</h2>
+        <p>I'm a second-year undergraduate at the <strong>University of Sri Jayewardenepura</strong>, majoring in Computer Science, Applied Mathematics, and Mathematics.</p>
+        <p>I enjoy teamwork, adapting to new environments, and building impactful systems that make a real difference.</p>
+        <ul class="info-list">
+          <li><i class="fa-solid fa-location-dot"></i> Sri Lanka</li>
+          <li><i class="fa-solid fa-envelope"></i> dimashatajmani@gmail.com</li>
+          <li><i class="fa-brands fa-github"></i> github.com/demoojaya</li>
+        </ul>
+      </div>
+    </div>
+    <div class="byline">By Dimasha Jayathilaka</div>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: dimashatajmani@gmail.com</p>
-</section>
+  <!-- VISION / MISSION -->
+  <section id="vision" class="pane alt reveal">
+    <span class="sparkle" style="top:10%;right:6%;font-size:1.3rem">✦</span>
+    <div class="squiggle" style="bottom:12%;left:5%;width:110px;opacity:.4">
+      <svg viewBox="0 0 110 50" fill="none"><path d="M5 40 Q25 8 45 25 Q65 42 85 15 Q97 5 108 18" stroke="#c4935a" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+    </div>
+    <div class="pane-inner split-right">
+      <div class="oval-frame oval-rect">
+        <img src="vision.jpg" alt="Vision" onerror="this.style.display='none'">
+        <div class="ph-icon"><i class="fa-solid fa-lightbulb"></i></div>
+      </div>
+      <div class="pane-text">
+        <h2 class="pane-head amber">VISION</h2>
+        <p>To become a skilled software engineer who bridges theoretical mathematics and practical software development — creating solutions that are both elegant and effective.</p>
+        <h2 class="pane-head dark" style="margin-top:28px">MISSION</h2>
+        <p>To continuously grow through hands-on projects, collaborative teamwork, and lifelong learning — delivering high-quality, impactful systems in every role I take on.</p>
+      </div>
+    </div>
+    <div class="byline">By Dimasha Jayathilaka</div>
+  </section>
 
-<footer>
-  <p>© 2026 Dimasha Jayathilaka</p>
-</footer>
+  <!-- EDUCATION -->
+  <section id="education" class="pane reveal">
+    <span class="sparkle" style="top:8%;right:7%;font-size:1.5rem">✦</span>
+    <div class="pane-inner split-left">
+      <div class="oval-frame oval-rect">
+        <img src="education.jpg" alt="Education" onerror="this.style.display='none'">
+        <div class="ph-icon"><i class="fa-solid fa-book-open"></i></div>
+      </div>
+      <div class="pane-text">
+        <h2 class="pane-head amber">EDUCATION</h2>
+        <div class="twin-cols">
+          <div>
+            <span class="year-tag">2022 – Present</span>
+            <h4>UNIVERSITY OF SRI JAYEWARDENEPURA</h4>
+            <p>BSc in Computer Science, Applied Mathematics & Mathematics. Strong academic foundation with focus on algorithms and data.</p>
+          </div>
+          <div>
+            <span class="year-tag">2010 – 2021</span>
+            <h4>SECONDARY SCHOOL</h4>
+            <p>Completed A/L with distinction in Mathematics and Science streams, building a strong quantitative skill set.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="byline">By Dimasha Jayathilaka</div>
+  </section>
 
-<script src="script.js"></script>
+  <!-- SKILLS -->
+  <section id="skills" class="pane alt reveal">
+    <span class="sparkle" style="top:9%;right:6%;font-size:1.4rem">✦</span>
+    <div class="pane-inner split-right">
+      <div class="oval-frame oval-rect">
+        <img src="skills.jpg" alt="Skills" onerror="this.style.display='none'">
+        <div class="ph-icon"><i class="fa-solid fa-code"></i></div>
+      </div>
+      <div class="pane-text">
+        <h2 class="pane-head dark">SKILL</h2>
+        <div class="skill-quad">
+          <div class="sq-item">
+            <h4 class="amber">JAVA</h4>
+            <p>OOP, JavaFX, Spring. Full app dev with database integration.</p>
+          </div>
+          <div class="sq-item">
+            <h4 class="amber">SQL / MYSQL</h4>
+            <p>DB design, normalization, role-based queries, constraints.</p>
+          </div>
+          <div class="sq-item">
+            <h4 class="amber">PYTHON</h4>
+            <p>Scripting, data manipulation, algorithms, math computing.</p>
+          </div>
+          <div class="sq-item">
+            <h4 class="amber">MATHEMATICS</h4>
+            <p>Applied math, calculus, statistics and linear algebra.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="byline">By Dimasha Jayathilaka</div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="pane reveal">
+    <span class="sparkle" style="top:8%;right:7%;font-size:1.3rem">✦</span>
+    <div class="pane-inner split-left">
+      <div class="oval-frame oval-rect">
+        <img src="experience.jpg" alt="Experience" onerror="this.style.display='none'">
+        <div class="ph-icon"><i class="fa-solid fa-briefcase"></i></div>
+      </div>
+      <div class="pane-text">
+        <h2 class="pane-head amber">EXPERIENCE</h2>
+        <div class="twin-cols">
+          <div>
+            <span class="year-tag">2023 – 2024</span>
+            <h4>GROUP PROJECT LEAD</h4>
+            <p>Led team development of Pharmacy Management System, coordinating DB design, role-based access, and SQL implementation.</p>
+          </div>
+          <div>
+            <span class="year-tag">2023</span>
+            <h4>SOLO DEVELOPER</h4>
+            <p>Built an Airline Booking System independently using JavaFX and MySQL with complete booking flow and management features.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="byline">By Dimasha Jayathilaka</div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="pane alt reveal">
+    <span class="sparkle" style="top:8%;right:7%;font-size:1.5rem">✦</span>
+    <div class="squiggle" style="bottom:10%;right:4%;width:120px;opacity:.4">
+      <svg viewBox="0 0 120 55" fill="none"><path d="M5 45 Q28 8 50 28 Q72 48 95 18 Q108 5 118 20" stroke="#c4935a" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+    </div>
+    <div class="pane-text center-text" style="max-width:900px;margin:auto">
+      <h2 class="pane-head dark" style="text-align:center">2024 PROJECT</h2>
+      <div class="proj-grid">
+        <div class="proj-card">
+          <div class="proj-oval">
+            <img src="project1.png" alt="Airline" onerror="this.style.display='none'">
+            <div class="ph-icon"><i class="fa-solid fa-plane"></i></div>
+          </div>
+          <div class="proj-tags"><span>JavaFX</span><span>MySQL</span></div>
+          <h3>Airline Booking System</h3>
+          <p>Full booking management with seat selection, reservations, and database integration using JavaFX and MySQL.</p>
+          <a href="#" class="btn b-outline btn-sm"><i class="fa-brands fa-github"></i> View Code</a>
+        </div>
+        <div class="proj-card">
+          <div class="proj-oval">
+            <img src="project2.png" alt="Pharmacy" onerror="this.style.display='none'">
+            <div class="ph-icon"><i class="fa-solid fa-pills"></i></div>
+          </div>
+          <div class="proj-tags"><span>SQL</span><span>Database</span></div>
+          <h3>Pharmacy Management System</h3>
+          <p>Database system with role-based access control, inventory management and SQL constraints for a multi-user pharmacy.</p>
+          <a href="https://github.com/demoojaya/Pharamacy-group-Project" class="btn b-outline btn-sm" target="_blank"><i class="fa-brands fa-github"></i> View Code</a>
+        </div>
+      </div>
+    </div>
+    <div class="byline">By Dimasha Jayathilaka</div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="pane reveal">
+    <span class="sparkle" style="top:9%;right:6%;font-size:1.4rem">✦</span>
+    <div class="pane-inner split-left">
+      <div class="oval-frame oval-rect">
+        <img src="contact.jpg" alt="Contact" onerror="this.style.display='none'">
+        <div class="ph-icon"><i class="fa-solid fa-handshake"></i></div>
+      </div>
+      <div class="pane-text">
+        <h2 class="pane-head amber">LET'S<br>COLLABORATE</h2>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-envelope"></i> dimashatajmani@gmail.com</li>
+          <li><i class="fa-brands fa-linkedin"></i> linkedin.com/in/dimashajayathilaka</li>
+          <li><i class="fa-brands fa-github"></i> github.com/demoojaya</li>
+          <li><i class="fa-solid fa-location-dot"></i> Sri Lanka</li>
+        </ul>
+      </div>
+    </div>
+    <div class="byline">By Dimasha Jayathilaka</div>
+  </section>
+
+  <!-- THANKS -->
+  <section class="thanks reveal">
+    <span class="sparkle" style="top:20%;left:55%;font-size:1.6rem">✦</span>
+    <span class="sparkle" style="bottom:25%;right:15%;font-size:1.1rem">✦</span>
+    <div class="thanks-inner">
+      <div class="oval-frame oval-lg">
+        <img src="profile.jpg" alt="Dimasha" onerror="this.style.display='none'">
+        <div class="ph-icon"><i class="fa-solid fa-user"></i></div>
+      </div>
+      <div class="thanks-copy">
+        <h2><span class="amber">THANKS</span><br>YOU</h2>
+        <p>© 2026 Dimasha Jayathilaka</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
