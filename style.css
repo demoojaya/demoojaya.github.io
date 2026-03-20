@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset & base */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple → Blue */
+    background: linear-gradient(135deg, #6a11cb, #2575fc, #ff6aff);
     color: #fff;
     scroll-behavior: smooth;
 }
@@ -44,7 +44,8 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffccff; /* Light purple hover */
+    color: #ffccff;
+    transform: scale(1.1);
 }
 
 /* HERO */
@@ -54,7 +55,7 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 50px;
     font-weight: 700;
     margin-bottom: 20px;
     background: linear-gradient(90deg, #ff6aff, #00d4ff);
@@ -86,7 +87,7 @@ nav a:hover {
 
 .btn:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 /* SECTIONS */
@@ -118,7 +119,7 @@ section h2 {
     width: 140px;
     text-align: center;
     font-weight: 600;
-    transition: 0.3s;
+    transition: 0.4s;
     border: 1px solid rgba(255,255,255,0.2);
 }
 
