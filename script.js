@@ -14,5 +14,5 @@ const toggleBtn=document.getElementById('theme-toggle');
 toggleBtn.addEventListener('click',()=>{
   document.body.classList.toggle('light-theme');
   const icon=toggleBtn.querySelector('i');
-  icon.classList.contains('fa-moon') ? (icon.classList.replace('fa-moon','fa-sun')) : (icon.classList.replace('fa-sun','fa-moon'));
+  icon.classList.contains('fa-moon') ? icon.classList.replace('fa-moon','fa-sun') : icon.classList.replace('fa-sun','fa-moon');
 });
