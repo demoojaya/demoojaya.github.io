@@ -1,51 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Dimasha | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav>
-        <h2>My Portfolio</h2>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<!-- NAVBAR -->
+<nav>
+  <h2>Dimasha</h2>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <!-- About -->
-    <section id="about">
-        <h1>Hello, I'm Dimasha Jayathilaka👋</h1>
-        <p>Computer Science & Mathematics Undergraduate passionate about software development.</p>
-    </section>
+<!-- HERO -->
+<section class="hero">
+  <h1>Hi, I'm Dimasha Jayathilaka 👋</h1>
+  <p>Computer Science Undergraduate | Java | SQL | Python | Developer</p>
+  <p>Passionate about mathematics and problem-solving</p>
 
-    <!-- Projects -->
-    <section id="projects">
-        <h2>My Projects</h2>
+  <div class="buttons">
+    <a href="https://github.com/demoojaya" class="btn" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/dimashajayathilaka" class="btn btn-outline" target="_blank">LinkedIn</a>
+  </div>
+</section>
 
-        <div class="project">
-            <h3>Airline Booking System</h3>
-            <p>JavaFX + MySQL based system with GUI and database integration.</p>
-        </div>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I'm a second-year undergraduate at the University of Sri Jayewardenepura, Sri Lanka,
+    majoring in Computer Science, Applied Mathematics, and Mathematics.
+  </p>
+  <p>
+    I am an outgoing individual who thrives in team environments, adapts quickly to new
+    situations, and enjoys collaborating with diverse groups.
+  </p>
+  <p>
+    My passion for technology and mathematics drives me to continuously learn,
+    explore new advancements, and apply my skills to impactful real-world projects.
+  </p>
+</section>
 
-        <div class="project">
-            <h3>Pharmacy Management System</h3>
-            <p>Database-driven system with SQL constraints and role-based access.</p>
-        </div>
-    </section>
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
 
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: dimashatajmani@gmail.com</p>
-    </section>
+  <div class="project-container">
 
-    <script src="script.js"></script>
+    <div class="card">
+      <h3>Airline Booking System</h3>
+      <p>
+        JavaFX + MySQL system with GUI and full booking management,
+        including user roles and database integration.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Pharmacy Management System</h3>
+      <p>
+        Database-driven system with SQL constraints, triggers, and
+        role-based access for admin, pharmacist, and customers.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Quantum Kernel Machine Learning</h3>
+      <p>
+        Explored quantum computing with machine learning using quantum kernel algorithms.
+        Demonstrated how quantum feature spaces improve similarity analysis in SVM models.
+      </p>
+      <p><strong>Advisor:</strong> Prof. G.H.J. Lanel</p>
+    </div>
+
+    <div class="card">
+      <h3>Haber–Bosch NH₃ Modeling</h3>
+      <p>
+        Developed a mathematical model for ammonia synthesis, identifying optimal
+        conditions (450°C, 200 atm) achieving 62% yield.
+      </p>
+      <p><strong>Advisor:</strong> Prof. R.P.K.C.M. Ranasinghe</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: dimashatajmani@gmail.com</p>
+</section>
+
+<footer>
+  <p>© 2026 Dimasha Jayathilaka</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
