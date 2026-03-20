@@ -1,29 +1,38 @@
-// ========================
-//  SCROLL REVEAL
-// ========================
-const revealEls = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+// Typing Effect
+const text = "Hi, I'm Dimasha Jayathilaka 👋";
+let i = 0;
+function typing(){
+    if(i<text.length){
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing,50);
     }
-  });
-}, { threshold: 0.1 });
-revealEls.forEach(el => observer.observe(el));
+}
+typing();
 
-// ========================
-//  ACTIVE NAV LINK
-// ========================
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
+// Fade-in on scroll
+const faders = document.querySelectorAll('.fade');
+function showOnScroll(){
+    faders.forEach(el=>{
+        const top = el.getBoundingClientRect().top;
+        if(top < window.innerHeight-50){
+            el.classList.add('show');
+        }
+    });
+}
+window.addEventListener('scroll', showOnScroll);
+showOnScroll(); // initial check
 
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id');
-  });
-  navLinks.forEach(a => {
-    a.classList.remove('nav-active');
-    if (a.getAttribute('href') === '#' + current) a.classList.add('nav-active');
-  });
+// Light/Dark Toggle
+const toggleBtn = document.getElementById('theme-toggle');
+toggleBtn.addEventListener('click', ()=>{
+    document.body.classList.toggle('light-theme');
+    const icon = toggleBtn.querySelector('i');
+    if(document.body.classList.contains('light-theme')){
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    }else{
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    }
 });
